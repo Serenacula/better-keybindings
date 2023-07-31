@@ -17,23 +17,32 @@ The core idea of this is to use `cmd+[i j k l]` as your basic movement.
 #### Normal movement
 
 -   `cmd+i` goes one line up
--   `cmd+j` goes one character left
--   `cmd+l` goes one character right
 -   `cmd+k` goes one line down
+-   `cmd+j` goes one word part left
+-   `cmd+l` goes one word part right
+
+-   `cmd+9` goes one character left
+-   `cmd+0` goes one character right
+
+-   `cmd+backspace` deletes one word part left
+-   `cmd+delete/cmd+fn+backspace` deletes one word part right
 
 #### Fast movement
 
--   `cmd+shift+i` goes five lines up
--   `cmd+shift+j` goes one word left
--   `cmd+shift+l` goes one word right
--   `cmd+shift+k` goes five lines down
+-   `cmd+alt+i` goes five lines up
+-   `cmd+alt+k` goes five lines down
+-   `cmd+alt+j` goes one word left
+-   `cmd+alt+l` goes one word right
+
+-   `cmd+alt+backspace` deletes one word left
+-   `cmd+alt+delete/cmd+alt+fn+backspace` deletes one word right
 
 #### Very fast Movement
 
 -   `cmd+ctrl+i` goes a page up
+-   `cmd+ctrl+k` goes a page down
 -   `cmd+ctrl+j` goes to the start of the line
 -   `cmd+ctrl+l` goes to the end of the line
--   `cmd+ctrl+k` goes a page down
 
 (note: since vscode didn't like `cmd+ctrl+alt+[i j k l]`, this just uses `ctrl+alt+[i j k l]` for selection)
 
@@ -41,10 +50,10 @@ The core idea of this is to use `cmd+[i j k l]` as your basic movement.
 
 #### Line manipulation
 
--   `ctrl+i` moves the line up
--   `ctrl+j` outdents the line left
--   `ctrl+l` indents the line right
--   `ctrl+k` moves the line down
+-   `cmd+y` moves the line up
+-   `cmd+h` moves the line down
+-   `cmd+u` outdents the line left
+-   `cmd+o` indents the line right
 
 #### File explorer manipulation (in the side panel)
 
@@ -54,19 +63,24 @@ The core idea of this is to use `cmd+[i j k l]` as your basic movement.
 
 ### Editor Navigation
 
+#### Next/Previous Location
+
+-   `ctrl+u` moves to the previous location in the code
+-   `ctrl+o` moves to the next location in the code
+
 #### Change tab
 
--   `cmd+y` moves to the editor group up
--   `cmd+u` moves to the tab on the left
--   `cmd+o` moves to the tab on the right
--   `cmd+h` moves to the editor group below
+-   `ctrl+i` moves to the editor group above
+-   `ctrl+k` moves to the editor group below
+-   `ctrl+j` moves to the tab on the left
+-   `ctrl+l` moves to the tab on the right
 
 #### Move tab
 
--   `cmd+shift+y` moves the current tab to the editor group above
--   `cmd+shift+u` moves the current tab left one
--   `cmd+shift+o` moves the current tab right one
--   `cmd+shift+h` moves the current tab to the editor group below
+-   `ctrl+shift+y` moves the current tab to the editor group above
+-   `ctrl+shift+h` moves the current tab to the editor group below
+-   `ctrl+shift+u` moves the current tab left one
+-   `ctrl+shift+o` moves the current tab right one
 
 #### Panel Focus
 

@@ -22,28 +22,28 @@
     },
 
     {
-        "key": "alt+cmd+k",
+        "key": "shift+cmd+k",
         "command": "cursorDownSelect",
         "when": "textInputFocus"
     },
     {
-        "key": "alt+cmd+i",
+        "key": "shift+cmd+i",
         "command": "cursorUpSelect",
         "when": "textInputFocus"
     },
     {
-        "key": "alt+cmd+j",
+        "key": "shift+cmd+j",
         "command": "cursorLeftSelect",
         "when": "textInputFocus"
     },
     {
-        "key": "alt+cmd+l",
+        "key": "shift+cmd+l",
         "command": "cursorRightSelect",
         "when": "textInputFocus"
     },
 
     {
-        "key": "shift+cmd+i",
+        "key": "alt+cmd+i",
         "command": "cursorMove",
         "args": {
             "to": "up",
@@ -53,7 +53,7 @@
         "when": "textInputFocus"
     },
     {
-        "key": "shift+cmd+k",
+        "key": "alt+cmd+k",
         "command": "cursorMove",
         "args": {
             "to": "down",
@@ -63,12 +63,12 @@
         "when": "textInputFocus"
     },
     {
-        "key": "shift+cmd+j",
+        "key": "alt+cmd+j",
         "command": "cursorWordLeft",
         "when": "textInputFocus"
     },
     {
-        "key": "shift+cmd+l",
+        "key": "alt+cmd+l",
         "command": "cursorWordEndRight",
         "when": "textInputFocus"
     },
@@ -128,24 +128,45 @@
     },
 
     {
-        "key": "ctrl+alt+j",
+        "key": "shift+ctrl+cmd+j",
         "command": "cursorHomeSelect",
         "when": "textInputFocus"
     },
     {
-        "key": "ctrl+alt+l",
+        "key": "shift+ctrl+cmd+l",
         "command": "cursorEndSelect",
         "when": "textInputFocus"
     },
     {
-        "key": "alt+ctrl+i",
+        "key": "shift+ctrl+cmd+i",
         "command": "cursorPageUpSelect",
         "when": "textInputFocus"
     },
     {
-        "key": "alt+ctrl+k",
+        "key": "shift+ctrl+cmd+k",
         "command": "cursorPageDownSelect",
         "when": "textInputFocus"
+    },
+
+    {
+        "key": "ctrl+i",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
     },
 
     {
@@ -183,16 +204,7 @@
         "command": "-cursorUp",
         "when": "textInputFocus"
     },
-    {
-        "key": "ctrl+i",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
+
     {
         "key": "cmd+k",
         "command": "editor.action.scrollDownHover",
@@ -578,13 +590,53 @@
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
     },
     {
-        "key": "ctrl+j",
-        "command": "editor.action.outdentLines",
-        "when": "editorTextFocus && !editorReadonly"
+        "key": "ctrl+backspace",
+        "command": "deleteAllLeft",
+        "when": "textInputFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+l",
-        "command": "editor.action.indentLines",
-        "when": "editorTextFocus && !editorReadonly"
+        "key": "cmd+backspace",
+        "command": "-deleteAllLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+delete",
+        "command": "deleteAllRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+delete",
+        "command": "-deleteAllRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "-deleteAllRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+cmd+backspace",
+        "command": "deleteAllLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+cmd+delete",
+        "command": "deleteAllRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+cmd+backspace",
+        "command": "deleteWordLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+cmd+delete",
+        "command": "deleteWordRight",
+        "when": "textInputFocus && !editorReadonly"
     }
 ]
