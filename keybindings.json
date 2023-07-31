@@ -1,13 +1,24 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "cmd+j",
+        "key": "cmd+9",
         "command": "cursorLeft",
         "when": "textInputFocus"
     },
     {
-        "key": "cmd+l",
+        "key": "cmd+0",
         "command": "cursorRight",
+        "when": "textInputFocus"
+    },
+
+    {
+        "key": "cmd+j",
+        "command": "cursorWordPartLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+l",
+        "command": "cursorWordPartRight",
         "when": "textInputFocus"
     },
     {
@@ -22,6 +33,17 @@
     },
 
     {
+        "key": "cmd+backspace",
+        "command": "deleteWordPartLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+delete",
+        "command": "deleteWordPartRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+
+    {
         "key": "shift+cmd+k",
         "command": "cursorDownSelect",
         "when": "textInputFocus"
@@ -33,11 +55,21 @@
     },
     {
         "key": "shift+cmd+j",
-        "command": "cursorLeftSelect",
+        "command": "cursorWordPartLeftSelect",
         "when": "textInputFocus"
     },
     {
         "key": "shift+cmd+l",
+        "command": "cursorWordPartRightSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+cmd+9",
+        "command": "cursorLeftSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+cmd+0",
         "command": "cursorRightSelect",
         "when": "textInputFocus"
     },
@@ -107,6 +139,17 @@
     },
 
     {
+        "key": "alt+cmd+backspace",
+        "command": "deleteWordLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+cmd+delete",
+        "command": "deleteWordRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+
+    {
         "key": "ctrl+cmd+l",
         "command": "cursorEnd",
         "when": "textInputFocus"
@@ -125,6 +168,27 @@
         "key": "ctrl+cmd+k",
         "command": "cursorPageDown",
         "when": "textInputFocus"
+    },
+
+    {
+        "key": "ctrl+cmd+backspace",
+        "command": "deleteAllLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+cmd+delete",
+        "command": "deleteAllRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+backspace",
+        "command": "deleteAllLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+delete",
+        "command": "deleteAllRight",
+        "when": "textInputFocus && !editorReadonly"
     },
 
     {
@@ -149,24 +213,69 @@
     },
 
     {
-        "key": "ctrl+i",
+        "key": "cmd+y",
         "command": "editor.action.moveLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+k",
+        "key": "cmd+h",
         "command": "editor.action.moveLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+j",
+        "key": "cmd+u",
         "command": "editor.action.outdentLines",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+l",
+        "key": "cmd+o",
         "command": "editor.action.indentLines",
         "when": "editorTextFocus && !editorReadonly"
+    },
+
+    {
+        "key": "ctrl+u",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+
+    {
+        "key": "ctrl+i",
+        "command": "workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusBelowGroup"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.nextEditor"
+    },
+
+    {
+        "key": "ctrl+shift+i",
+        "command": "workbench.action.moveEditorToAboveGroup"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.moveEditorToBelowGroup"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.moveEditorLeftInGroup"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.moveEditorRightInGroup"
     },
 
     {
@@ -204,7 +313,6 @@
         "command": "-cursorUp",
         "when": "textInputFocus"
     },
-
     {
         "key": "cmd+k",
         "command": "editor.action.scrollDownHover",
@@ -486,25 +594,6 @@
         "when": "statusBarFocused"
     },
     {
-        "key": "cmd+u",
-        "command": "workbench.action.previousEditor"
-    },
-    {
-        "key": "cmd+o",
-        "command": "workbench.action.nextEditor"
-    },
-
-    {
-        "key": "shift+cmd+u",
-        "command": "workbench.action.navigateBack",
-        "when": "canNavigateBack"
-    },
-    {
-        "key": "shift+cmd+o",
-        "command": "workbench.action.navigateForward",
-        "when": "canNavigateForward"
-    },
-    {
         "key": "alt+cmd+p",
         "command": "workbench.action.showAllSymbols"
     },
@@ -553,32 +642,8 @@
         "when": "inQuickOpen"
     },
     {
-        "key": "cmd+y",
-        "command": "workbench.action.focusAboveGroup"
-    },
-    {
-        "key": "cmd+h",
-        "command": "workbench.action.focusBelowGroup"
-    },
-    {
-        "key": "cmd+shift+h",
-        "command": "workbench.action.moveEditorToBelowGroup"
-    },
-    {
-        "key": "cmd+shift+y",
-        "command": "workbench.action.moveEditorToAboveGroup"
-    },
-    {
-        "key": "shift+cmd+u",
-        "command": "workbench.action.moveEditorLeftInGroup"
-    },
-    {
         "key": "cmd+k shift+cmd+left",
         "command": "-workbench.action.moveEditorLeftInGroup"
-    },
-    {
-        "key": "shift+cmd+o",
-        "command": "workbench.action.moveEditorRightInGroup"
     },
     {
         "key": "cmd+k shift+cmd+right",
@@ -589,19 +654,10 @@
         "command": "filesExplorer.openFilePreserveFocus",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
     },
-    {
-        "key": "ctrl+backspace",
-        "command": "deleteAllLeft",
-        "when": "textInputFocus && !editorReadonly"
-    },
+
     {
         "key": "cmd+backspace",
         "command": "-deleteAllLeft",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+delete",
-        "command": "deleteAllRight",
         "when": "textInputFocus && !editorReadonly"
     },
     {
@@ -614,29 +670,20 @@
         "command": "-deleteAllRight",
         "when": "textInputFocus && !editorReadonly"
     },
-    {
-        "key": "ctrl+cmd+backspace",
-        "command": "deleteAllLeft",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+cmd+delete",
-        "command": "deleteAllRight",
-        "when": "textInputFocus && !editorReadonly"
-    },
+
     {
         "key": "shift+cmd+k",
         "command": "-editor.action.deleteLines",
         "when": "textInputFocus && !editorReadonly"
     },
     {
-        "key": "alt+cmd+backspace",
-        "command": "deleteWordLeft",
-        "when": "textInputFocus && !editorReadonly"
+        "key": "shift+cmd+.",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
     },
     {
-        "key": "alt+cmd+delete",
-        "command": "deleteWordRight",
-        "when": "textInputFocus && !editorReadonly"
+        "key": "cmd+k cmd+i",
+        "command": "-editor.action.showHover",
+        "when": "editorTextFocus"
     }
 ]
