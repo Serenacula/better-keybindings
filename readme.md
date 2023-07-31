@@ -4,8 +4,6 @@ VSCode has some great keybinding support, but the default settings are utter non
 
 Some people prefer to use vim keybindings, however I have found these to be quite difficult to learn intuitively, and also not quite have the flexibility I was looking for. Instead, I made this.
 
-Since I was focused on ergonomics over ease-of-learning, it does not strictly follow the defaults in a few places where it probably could, but I believe it is still very quick to pick up.
-
 ## How to use
 
 ### Navigation
